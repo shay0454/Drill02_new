@@ -10,7 +10,9 @@ def render_frame(x,y):
         delay(0.01)    
 def run_rectangle():
     print('rect')
-    for x in range(50,750+1,10):render_frame(x,90)
+    x,y=400,90
+    for x in range(50,750+1,10):render_frame(x,y)
+    for y in range(90,510+1,10):render_frame(750,y)
     for x in range(750,50-1,-10):render_frame(x,550)
 def run_circle():
     print('circle')
