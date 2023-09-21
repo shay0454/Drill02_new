@@ -12,14 +12,13 @@ def run_circle():
     grass.draw_now(400,30)
     character.draw_now(400,90)
     cx,cy,r=400,300,200
-    for deg in range(0,360,5):
+    for deg in range(0,360+1,5):
         x=cx+r*math.cos(math.radians(deg-90))
         y=cy+r*math.sin(math.radians(deg-90))
         clear_canvas_now()
         grass.draw_now(400,30)
         character.draw_now(x,y)
         delay(0.01)
-    pass
 while True:
     run_rectangle()
     run_circle()
