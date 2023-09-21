@@ -9,10 +9,16 @@ def run_rectangle():
 def run_circle():
     print('circle')
     #그림 그림
-    clear_canvas_now()
     grass.draw_now(400,30)
     character.draw_now(400,90)
-    delay(1)
+    cx,cy,r=400,300,200
+    for deg in range(0,360,5):
+        x=cx+r*math.cos(math.radians(deg-90))
+        y=cy+r*math.sin(math.radians(deg-90))
+        clear_canvas_now()
+        grass.draw_now(400,30)
+        character.draw_now(x,y)
+        delay(0.01)
     pass
 while True:
     run_rectangle()
